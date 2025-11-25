@@ -9,47 +9,47 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "./img/kanelas.png",
+      "src": "./img/Icon1024.png",
       "sizes": "1024x1024",
       "type": "image/png"
     },
     {
-      "src": "./img/icon512.png",
+      "src": "./img/Icon512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "./img/icon384.png",
+      "src": "./img/Icon384.png",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "./img/icon256.png",
+      "src": "./img/Icon256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "./img/icon192.png",
-      "sizes": "192x192",
+      "src": "./img/Icon192.png",
+      "sizes": "192x192", 
       "type": "image/png"
     },
     {
-      "src": "./img/icon128.png",
+      "src": "./img/Icon128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "./img/icon96.png",
+      "src": "./img/Icon96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "./img/icon64.png",
+      "src": "./img/Icon64.png",
       "sizes": "64x64",
       "type": "image/png"
     },
     {
-      "src": "./img/icon32.png",
+      "src": "./img/Icon32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
