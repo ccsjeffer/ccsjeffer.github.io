@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#4b4949" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="shortcut icon" href="./img/kanelas.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Glamour & Style</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <div class="logo">
+          <img src="./img/kanelas.png" alt="logo kanelas" />
+        </div>
+
+        <!-- Botón menú hamburguesa -->
+        <button id="btnMenu" class="btnMenu" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+
+        <!-- MENÚ -->
+        <div class="menu" id="menuNav">
+          <nav>
+            <ul class="item">
+              <li><a href="#principal">Principal</a></li>
+              <li><a href="#historia">Historia</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+              <li><a href="#acercade">Acerca de</a></li>
+            </ul>
+          </nav>
+          <button id="logoutBtn" class="logoutBtn">Cerrar Sesión</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main" id="main">
+      <!-- Sección Principal -->
+      <section class="container_p" id="principal">
+        <h1>Consulta las Ofertas en Accesorios</h1>
+        <p class="offert">
+          Descubre las últimas ofertas en accesorios que combinan estilo,
+          comodidad y elegancia. En Glamour & Style queremos que cada detalle
+          refleje tu personalidad. Explora nuestra colección exclusiva de
+          bolsos, relojes, joyas y más. ¡Atrévete a brillar con nosotros!
+        </p>
+      </section>
+
+      <!-- Sección Historia -->
+      <section class="containers container_history" id="historia">
+        <h2 class="subTitle">Historia</h2>
+        <p class="text_history">
+          Glamour & Style nació del sueño de dos apasionados por la moda que
+          creyeron que vestir bien es una forma de expresar quiénes somos.
+          Desde nuestros inicios, nos hemos comprometido con ofrecer prendas de
+          alta calidad, hechas con amor y atención al detalle.
+        </p>
+        <button type="button" class="up">Arriba</button>
+      </section>
+
+      <!-- Sección Servicios -->
+      <section class="containers container_services" id="servicios">
+        <h2 class="subTitle">Servicios</h2>
+
+        <div class="service">
+          <i class="fas fa-wrench"></i>
+          <h3 class="subService">Venta de Accesorios</h3>
+          <p>
+            Encuentra una amplia variedad de accesorios diseñados para resaltar tu estilo.
+          </p>
+          <br />
+          <img
+            src="./img/servicio1.png"
+            alt="Venta de Accesorios"
+            class="service-img"
+          />
+        </div>
+
+        <div class="service">
+          <i class="fas fa-shoe-prints"></i>
+          <h3 class="subService">Venta de Zapatos Deportivos</h3>
+          <p>
+            Comodidad, resistencia y diseño. Nuestros zapatos deportivos están
+            pensados para acompañarte en cada paso.
+          </p>
+          <br />
+          <img
+            src="./img/servicio2.png"
+            alt="Venta de Zapatos Deportivos"
+            class="service-img"
+          />
+        </div>
+
+        <div class="service">
+          <i class="fas fa-tshirt"></i>
+          <h3 class="subService">Venta de Ropa a la Medida</h3>
+          <p>Creamos prendas únicas que se adaptan perfectamente a ti.</p>
+          <br />
+          <img
+            src="./img/servicio3.png"
+            alt="Venta de Ropa a la Medida"
+            class="service-img"
+          />
+        </div>
+
+        <button type="button" class="up">Arriba</button>
+      </section>
+
+      <!-- Sección Contacto -->
+      <section class="containers container_contact" id="contacto">
+        <h2 class="subTitle">Contacto</h2>
+        <div class="elements_contact">
+          <form id="form" class="form" novalidate>
+            <label for="names">Nombres:</label>
+            <input type="text" id="names" />
+            <label for="lastNames">Apellidos:</label>
+            <input type="text" id="lastNames" />
+            <label for="mail">Correo Electrónico:</label>
+            <input type="email" id="mail" />
+            <label for="celphone">Celular:</label>
+            <input type="number" id="celphone" /><br />
+            <div class="check">
+              <input
+                class="checkPolitica"
+                type="checkbox"
+                id="checkPolitica"
+              />
+              <label class="labelPolitica" for="checkPolitica"
+                >Política de Datos</label
+              >
+            </div>
+            <button type="submit" id="btnSend" class="button_send">
+              Enviar
+            </button>
+            <button type="reset" id="btnClear" class="button_clear">
+              Limpiar
+            </button>
+          </form>
+
+          <div class="map_container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.9257469198083!2d-74.08083338573654!3d4.598055896649511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99d19f4e5b7f%3A0xbadf8f0be64b9f0!2sBogotá!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <button type="button" class="up">Arriba</button>
+      </section>
+
+      <!-- Sección Acerca de -->
+      <section class="containers container_acercade" id="acercade">
+        <h2 class="subTitle">Acerca de...</h2>
+        <div class="text_acercade">
+          En Glamour & Style creemos que la moda es mucho más que vestir — es
+          una forma de vida.
+        </div>
+        <button type="button" class="up">Arriba</button>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container_footer">
+        <p>Glamour & Style © 2025 | Todos los derechos reservados</p>
+        <ul class="social_net">
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=100068023823274&mibextid=ZbWKwL"
+              target="_blank"
+            >
+              <img src="./img/facebook.png" alt="Facebook" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/syncrosmart?igshid=MTc2OWV6ZGdkMzcxNA=="
+              target="_blank"
+            >
+              <img src="./img/instagram.png" alt="Instagram" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./scripts/sintaxis.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a8c062133a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- REGISTRO DEL SERVICE WORKER -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "Glamour & Style",
+  "short_name": "G&S",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4b4949",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./img/kanelas.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/kanelas.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

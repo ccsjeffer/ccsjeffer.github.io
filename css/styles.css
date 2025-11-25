@@ -1,0 +1,698 @@
+/* =============================
+   ESTILOS GENERALES
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffffff;
+  color: #4b4949;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =============================
+   HEADER
+============================= */
+.header {
+  background-color: #4b4949;
+  color: #D1FFD6;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+/* ===== Menú de navegación ===== */
+/* Ajuste: quitamos width:100% y centramos el contenido del contenedor .menu */
+.menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoutBtn {
+  margin-left: 20px;
+}
+
+/* La lista ocupa solo lo necesario para facilitar el centrado */
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: center;
+  width: auto;               
+}
+
+.menu ul li a {
+  color: #D1FFD6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #00FF00;
+}
+
+/* ===== Botón menú responsive ===== */
+.btnMenu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btnMenu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #D1FFD6;
+  border-radius: 2px;
+}
+
+
+/* =============================
+   SECCIONES
+============================= */
+.main {
+  text-align: center;
+}
+
+/* Principal */
+.container_p {
+  background-image: linear-gradient(50deg,#99788285, #d1c5c5b5 80%), url("../img/accessory-gf35d02501_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #4b4949;
+  padding: 80px 20px;
+}
+
+.container_p h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px #fff;
+}
+
+.offert {
+  background-color: rgba(255,255,255,0.8);
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Historia */
+.container_history {
+  background-color: #f3f3f3;
+  padding: 60px 20px;
+}
+
+.subTitle {
+  font-size: 28px;
+  color: #4b4949;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #00FF00;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.text_history {
+  max-width: 900px;
+  margin: 20px auto;
+  font-size: 17px;
+}
+
+/* Servicios */
+.container_services {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.service {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service i {
+  font-size: 40px;
+  color: #00FF00;
+  margin-bottom: 15px;
+}
+
+.subService {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4b4949;
+  margin-bottom: 10px;
+}
+
+/* === Imágenes dentro de cada servicio === */
+.service-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.1);
+}
+
+/* Ajuste en pantallas pequeñas */
+@media (max-width: 600px) {
+  .service-img {
+    max-height: 180px;
+  }
+}
+
+/* Ajuste para pantallas medianas */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .service-img {
+    max-height: 220px;
+  }
+}
+
+/* =============================
+   CONTACTO RESPONSIVO
+============================= */
+.container_contact {
+  padding: 60px 20px;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+
+.elements_contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* Formulario */
+.form {
+  flex: 1 1 350px;
+  max-width: 420px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0,255,0,0.2);
+  text-align: left;
+}
+
+.form label {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #4b4949;
+}
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #4b4949;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 15px;
+  outline: none;
+}
+
+.form input:focus {
+  border-color: #00FF00;
+  box-shadow: 0 0 5px rgba(0,255,0,0.5);
+}
+
+.button_send,
+.button_clear {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.button_send {
+  background-color: #00FF00;
+  color: #4b4949;
+  font-weight: 600;
+}
+
+.button_send:hover {
+  background-color: #4b4949;
+  color: #DDFFD1;
+}
+
+.button_clear {
+  background-color: #4b4949;
+  color: #DDFFD1;
+}
+
+.button_clear:hover {
+  background-color: #00FF00;
+  color: #000;
+}
+
+/* Mapa */
+.map_container {
+  flex: 1 1 350px;
+  max-width: 500px;
+}
+
+.map_container iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* 📱 Móviles */
+@media (max-width: 600px) {
+  .elements_contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .form,
+  .map_container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .map_container iframe {
+    height: 300px;
+  }
+
+  .up {
+    width: 100%;
+  }
+
+  .social_net img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* 💻 Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .elements_contact {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .form {
+    flex: 1 1 45%;
+    max-width: 400px;
+  }
+
+  .map_container {
+    flex: 1 1 45%;
+    max-width: 400px;
+  }
+
+  .map_container iframe {
+    height: 320px;
+  }
+}
+
+/* Acerca de */
+.container_acercade {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.text_acercade {
+  max-width: 900px;
+  margin: 20px auto;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+/* Botón "Arriba" */
+.up {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #00FF00;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.up:hover {
+  background-color: #4b4949;
+  color: #DDFFD1;
+}
+
+/* =============================
+   FOOTER
+============================= */
+.footer {
+  background-color: #4b4949;
+  color: #D1FFD6;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.container_footer {
+  max-width: 900px;
+  margin: auto;
+}
+
+.social_net {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.social_net img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social_net img:hover {
+  transform: scale(1.1);
+}
+/* =============================
+   RESPONSIVE
+============================= */
+
+/* 📱 Teléfonos (pantallas menores a 600px) */
+@media (max-width: 500px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .menu ul li a {
+    font-size: 1em;
+  }
+
+  .container_p h1 {
+    font-size: 26px;
+  }
+
+  .offert {
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  .service {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .subService {
+    font-size: 20px;
+  }
+
+  .form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  .up {
+    width: 100%;
+  }
+
+  .social_net img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* =============================
+   MENÚ RESPONSIVE MÓVIL
+============================= */
+
+@media (max-width: 768px) {
+
+.menu {
+    position: fixed;
+    top: 60px;           /* Debajo del header */
+    right: -300px;       /* Oculto hacia la derecha */
+    width: 250px;        /* Tamaño del panel */
+    height: auto;        /* Solo lo necesario */
+    max-height: 75vh;    /* Por si el contenido crece */
+    background-color: #4b4949;
+    padding: 20px 0 90px 0;
+    border-radius: 12px 0 0 12px; /* Esquinas redondeadas */
+    transition: right 0.4s ease;
+    box-shadow: -4px 4px 12px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    overflow-y: auto; 
+    z-index: 9999;
+}
+
+.menu.active {
+    right: 0; /* Se despliega */
+}
+
+/* Ítems centrados verticalmente */
+.menu ul {
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Botón cerrar sesión dentro del panel */
+.logoutBtn {
+    position: absolute;
+    bottom: 20px;             /* 🔥 Más arriba, separado de los items */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    margin-top: 15px;
+}
+
+
+  .menu.active {
+    right: 0; /* Se muestra */
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .menu {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+  .logoutBtn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+
+  /* Mostrar el botón hamburguesa */
+  .btnMenu {
+    display: flex;
+  }
+
+  /* Animación del botón */
+  .btnMenu.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .btnMenu.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .btnMenu.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
+
+/* 💻 Tablets (pantallas entre 601px y 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu ul {
+    gap: 15px;
+  }
+
+  .container_p h1 {
+    font-size: 32px;
+  }
+
+  .offert {
+    font-size: 17px;
+  }
+
+  .service {
+    margin: 20px auto;
+    width: 90%;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  iframe {
+    width: 90%;
+    height: 300px;
+  }
+
+  .social_net img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* 🖥️ Escritorio (pantallas mayores a 1024px) */
+@media (min-width: 1025px) {
+  .container {
+    width: 90%;
+  }
+
+  .container_p {
+    padding: 100px 20px;
+  }
+
+  .form {
+    max-width: 400px;
+  }
+
+  iframe {
+    width: 400px;
+    height: 300px;
+  }
+
+  .social_net img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* =============================
+   LOGIN ESTILOS
+============================= */
+
+.login-body {
+  background: #f7f7f7;
+}
+
+.main-login {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.login-container {
+  width: 95%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,255,0,0.25);
+  text-align: left;
+}
+
+.login-form label {
+  font-weight: 600;
+  color: #4b4949;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #4b4949;
+  border-radius: 6px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.error-msg {
+  display: none;
+  margin-top: 10px;
+  color: #e60000;
+  font-weight: bold;
+}
+
+.logoutBtn {
+  background: #ff4d4d;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logoutBtn:hover {
+  background: #b30000;
+}
