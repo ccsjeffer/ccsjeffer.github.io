@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const password = pass.value.trim();
 
     // Credenciales de prueba
-    const USER_OK = "admin";
-    const PASS_OK = "1234";
+    const USER_OK = "Admin";
+    const PASS_OK = "12345";
 
     if (username === USER_OK && password === PASS_OK) {
 

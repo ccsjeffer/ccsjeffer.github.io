@@ -1,8 +1,6 @@
-// Nombre del caché
-const CACHE_NAME = "glamour-v1";
+const CACHE_NAME = "glamour-v2";
 
-// Archivos que se van a almacenar
-const urlsToCache = [
+const URLS_TO_CACHE = [
   "./",
   "./index.html",
   "./login.html",
@@ -12,18 +10,19 @@ const urlsToCache = [
   "./img/kanelas.png"
 ];
 
-// Instalación del Service Worker
-self.addEventListener("install", e => {
-  e.waitUntil(
+// Instalación: cachea archivos
+self.addEventListener("install", event => {
+  event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache);
+      return cache.addAll(URLS_TO_CACHE);
     })
   );
+  self.skipWaiting();
 });
 
-// Activación
-self.addEventListener("activate", e => {
-  e.waitUntil(
+// Activación: limpia cachés viejos
+self.addEventListener("activate", event => {
+  event.waitUntil(
     caches.keys().then(keys =>
       Promise.all(
         keys.map(key => {
@@ -32,13 +31,25 @@ self.addEventListener("activate", e => {
       )
     )
   );
+  return self.clients.claim();
 });
 
-// Intercepción de peticiones
-self.addEventListener("fetch", e => {
-  e.respondWith(
-    caches.match(e.request).then(response => {
-      return response || fetch(e.request);
-    })
+// Estrategia NETWORK FIRST → lo más profesional
+self.addEventListener("fetch", event => {
+  event.respondWith(
+    fetch(event.request)
+      .then(response => {
+        const clone = response.clone();
+        caches.open(CACHE_NAME).then(cache => {
+          cache.put(event.request, clone);
+        });
+        return response;
+      })
+      .catch(() => {
+        // Offline → intenta archivo en cache
+        return caches.match(event.request).then(res => {
+          return res || caches.match("./index.html");
+        });
+      })
   );
 });
